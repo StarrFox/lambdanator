@@ -15,8 +15,6 @@
 
 import asyncio
 import collections
-import enum
-import posixpath
 import tarfile
 import typing.io
 import zipfile

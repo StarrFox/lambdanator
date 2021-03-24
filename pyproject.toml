@@ -9,8 +9,12 @@ python = "^3.8"
 "discord.py" = "^1.6.0"
 humanize = "^3.3.0"
 toml = "^0.10.2"
+Wand = {version = "^0.6.6", optional = true}
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.extras]
+wand = ["wand"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

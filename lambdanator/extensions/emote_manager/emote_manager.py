@@ -31,11 +31,11 @@ import discord
 import humanize
 from discord.ext import commands
 
-import lambdanator.utils as utils
-import lambdanator.utils.image as utils_image
-from lambdanator.utils import errors
-from lambdanator.utils.converter import emote_type_filter_default
-from lambdanator.utils.paginator import ListPaginator
+import lambdanator.extensions.emote_manager.utils as utils
+import lambdanator.extensions.emote_manager.utils.image as utils_image
+from lambdanator.extensions.emote_manager.utils import errors
+from lambdanator.extensions.emote_manager.utils.converter import emote_type_filter_default
+from lambdanator.extensions.emote_manager.utils.paginator import ListPaginator
 
 logger = logging.getLogger(__name__)
 
@@ -439,7 +439,7 @@ class EmoteManager(commands.Cog):
         static = utils_image.mime_type_for_image(image_data) != "image/gif"
         converted = False
         if static and counts[False] >= context.guild.emoji_limit:
-            image_data = await utils_image.convert_to_gif_in_subprocess(image_data)
+            image_data = await utils_image.convert_to_gif(image_data)
             converted = True
 
         try:
@@ -496,7 +496,7 @@ class EmoteManager(commands.Cog):
     async def create_emote_from_bytes(
             self, guild, name, author_id, image_data: bytes, *, reason=None
     ):
-        image_data = await utils_image.resize_in_subprocess(image_data)
+        image_data = await utils_image.resize_until_small(image_data)
         if reason is None:
             reason = f"Created by {utils.format_user(self.bot, author_id)}"
         return await guild.create_custom_emoji(

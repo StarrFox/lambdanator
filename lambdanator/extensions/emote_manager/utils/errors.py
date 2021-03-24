@@ -17,16 +17,15 @@ import asyncio
 
 from discord.ext import commands
 
-import utils
 
 class MissingManageEmojisPermission(commands.MissingPermissions):
 	"""The invoker or the bot doesn't have permissions to manage server emojis."""
 
 	def __init__(self):
 		super(Exception, self).__init__(
-			f'{utils.SUCCESS_EMOJIS[False]} '
 			"Sorry, you don't have enough permissions to run this command. "
-			'You and I both need the Manage Emojis permission.')
+			'You and I both need the Manage Emojis permission.'
+		)
 
 class EmoteManagerError(commands.CommandError):
 	"""Generic error with the bot. This can be used to catch all bot errors."""
