@@ -11,6 +11,7 @@ humanize = "^3.3.0"
 toml = "^0.10.2"
 Wand = {version = "^0.6.6", optional = true}
 Unidecode = "^1.2.0"
+jishaku = "^1.20.0"
 
 [tool.poetry.dev-dependencies]
 

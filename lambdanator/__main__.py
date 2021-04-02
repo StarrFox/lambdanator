@@ -30,6 +30,7 @@ def main():
     bot.load_extension("lambdanator.extensions.emote_manager.emote_manager")
     bot.load_extension("lambdanator.extensions.gamer_words.gamer_words")
     bot.load_extension("lambdanator.extensions.meta")
+    bot.load_extension("jishaku")
 
     bot.run(config["discord"]["token"])
 
