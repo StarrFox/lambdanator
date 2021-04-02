@@ -28,6 +28,7 @@ def main():
     bot = Lambdanator("lm/")
 
     bot.load_extension("lambdanator.extensions.emote_manager.emote_manager")
+    bot.load_extension("lambdanator.extensions.gamer_words.gamer_words")
     bot.load_extension("lambdanator.extensions.meta")
 
     bot.run(config["discord"]["token"])

@@ -106,6 +106,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "unidecode"
+version = "1.2.0"
+description = "ASCII transliterations of Unicode text"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
 name = "wand"
 version = "0.6.6"
 description = "Ctypes-based simple MagickWand API binding for Python"
@@ -135,7 +143,7 @@ wand = ["Wand"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "bbd91c8a82e410a362b00bbfa5882f0a7046c1f2520f29e132aef637714d6242"
+content-hash = "30c3ad79078d7d5628d7221bd438240aa71a7280aabfdd98ea045a4e0150685c"
 
 [metadata.files]
 aiohttp = [
@@ -248,6 +256,10 @@ typing-extensions = [
     {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
     {file = "typing_extensions-3.7.4.3-py3-none-any.whl", hash = "sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"},
     {file = "typing_extensions-3.7.4.3.tar.gz", hash = "sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c"},
+]
+unidecode = [
+    {file = "Unidecode-1.2.0-py2.py3-none-any.whl", hash = "sha256:12435ef2fc4cdfd9cf1035a1db7e98b6b047fe591892e81f34e94959591fad00"},
+    {file = "Unidecode-1.2.0.tar.gz", hash = "sha256:8d73a97d387a956922344f6b74243c2c6771594659778744b2dbdaad8f6b727d"},
 ]
 wand = [
     {file = "Wand-0.6.6-py2.py3-none-any.whl", hash = "sha256:b752b2c2ee6ce04210da4b2e591013a4d9303fbed3fcbd3fb450930777dcb117"},
