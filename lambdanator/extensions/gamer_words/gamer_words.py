@@ -247,7 +247,7 @@ class GamerWords(commands.Cog):
         await context.send_help("gamerwords")
 
     @gw.command()
-    @commands.has_permissions(manage_messages=True)
+    @commands.is_owner()
     async def toggle(self, context):
         """
         Toggle the replacer for this server
