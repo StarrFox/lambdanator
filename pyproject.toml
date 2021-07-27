@@ -1,22 +1,24 @@
 [tool.poetry]
 name = "lambdanator"
-version = "0.2.0"
+version = "0.2.1"
 description = "combination of lambda bots"
 authors = ["StarrFox <starrfox6312@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-"discord.py" = "^1.6.0"
+"discord.py" = {git = "https://github.com/Rapptz/discord.py"}
 humanize = "^3.3.0"
 toml = "^0.10.2"
 Wand = {version = "^0.6.6", optional = true}
+psutil = {version = "^5.8.0", optional = true}
 Unidecode = "^1.2.0"
-jishaku = "^1.20.0"
+jishaku = "2.2"
 
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.extras]
-wand = ["wand"]
+images = ["wand"]
+full = ["psutil", "wand"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

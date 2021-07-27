@@ -376,6 +376,9 @@ class GamerWords(commands.Cog):
     async def clear_usernames(self):
         await self.bot.wait_until_ready()
         for guild in self.bot.guilds:
+            if guild.me is None:
+                continue
+
             if not guild.me.guild_permissions.manage_nicknames:
                 continue
 

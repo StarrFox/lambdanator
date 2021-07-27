@@ -1,6 +1,7 @@
 import os.path
 
 import toml
+from discord import Intents
 
 from lambdanator import Lambdanator
 
@@ -25,7 +26,7 @@ def main():
     with open("config.toml") as fp:
         config = toml.load(fp)
 
-    bot = Lambdanator("lm/")
+    bot = Lambdanator("lm/", intents=Intents(members=True, guilds=True, messages=True, reactions=True))
 
     bot.load_extension("lambdanator.extensions.emote_manager.emote_manager")
     bot.load_extension("lambdanator.extensions.gamer_words.gamer_words")

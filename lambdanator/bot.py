@@ -10,6 +10,9 @@ class Lambdanator(commands.Bot):
             False: "\N{CROSS MARK}",
         }
 
+    async def on_ready(self):
+        print(self.user.id)
+
 
 
 

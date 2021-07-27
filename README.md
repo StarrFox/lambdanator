@@ -12,6 +12,6 @@ Install:
 
 `poetry install`
 
-add `--extras wand` for image stuff
+add `--extras images` for image stuff and `--extras full` for full install
 
 to use the wand stuff you need libimagemagik https://docs.wand-py.org/en/latest/guide/install.html
