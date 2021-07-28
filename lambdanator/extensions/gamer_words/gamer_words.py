@@ -242,7 +242,7 @@ class GamerWords(commands.Cog):
     @commands.group(invoke_without_command=True, aliases=["gamerwords"])
     async def gw(self, context):
         """
-        Base command for emote manager commands
+        Base command for gamerwords commands
         """
         await context.send_help("gamerwords")
 

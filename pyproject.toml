@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lambdanator"
-version = "0.2.1"
+version = "0.2.2"
 description = "combination of lambda bots"
 authors = ["StarrFox <starrfox6312@gmail.com>"]
 
