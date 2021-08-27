@@ -368,7 +368,7 @@ class GamerWords(commands.Cog):
             await webhook.send(
                 content=GamerReplacer(message.content).replace(),
                 username=author.display_name,
-                avatar_url=str(author.avatar_url),
+                avatar_url=str(author.avatar),
                 files=files,
                 allowed_mentions=allowed_mentions,
             )
