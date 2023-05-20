@@ -6,19 +6,17 @@ authors = ["StarrFox <starrfox6312@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-"discord.py" = {git = "https://github.com/Rapptz/discord.py"}
-humanize = "^3.3.0"
+humanize = "^4.3.0"
 toml = "^0.10.2"
-Wand = {version = "^0.6.6", optional = true}
-psutil = {version = "^5.8.0", optional = true}
-Unidecode = "^1.2.0"
-jishaku = "2.2"
+Wand = "^0.6.10"
+Unidecode = "^1.3.4"
+loguru = "^0.6.0"
 
-[tool.poetry.dev-dependencies]
-
-[tool.poetry.extras]
-images = ["wand"]
-full = ["psutil", "wand"]
+[tool.poetry.group.discord.dependencies]
+"discord.py" = "^2.0.1"
+jishaku = "^2.5.1"
+# jishaku memory usage feature
+psutil = "^5.9.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
